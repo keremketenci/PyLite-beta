@@ -1,0 +1,28 @@
+.logo.vite:hover {
+  filter: drop-shadow(0 0 2em #747bff);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafb);
+}
+
+.designer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: dashed 2px #ccc;
+}
+
+.dropzone {
+  position: relative;
+  overflow: none;
+  background-color: rgb(121, 125, 127 );
+  width: 500px;
+  height: 600px;
+  resize: both;
+  max-width: 99%;
+  max-height: 99%;
+}
+

@@ -1,0 +1,52 @@
+/* src-designer\components\ui\ui.module.css */
+
+.ComponentContainer {
+  position: absolute;
+}
+
+.Button {
+  position: absolute;
+  text-align: center;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  width: 100px;
+}
+
+.TextBox {
+  position: absolute;
+  text-align: center;
+  cursor: pointer;
+  background-color: white;
+  width: 100px;
+}
+
+.Label {
+  position: absolute;
+  text-align: center;
+  cursor: pointer;
+  color: black;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.CheckBox {
+  position: absolute;
+  text-align: center;
+  cursor: pointer;
+  background-color: white;
+  border: 2px solid gray;
+  padding: 10px;
+}
+
+.RadioButton {
+  position: absolute;
+  text-align: center;
+  cursor: pointer;
+  background-color: white;
+  border: 2px solid gray;
+  border-radius: 100%;
+  padding: 10px;
+}

@@ -1,0 +1,26 @@
+import tkinter as tk
+from tkinter import *
+
+class App(tk.Tk):
+    def __init__(self):
+        super().__init__()  # Call the __init__ method of tk.Tk to initialize the root window
+        
+        ## Setting up Initial Things
+        self.title("Created by PyLite")
+        self.configure(bg="#797D7F")
+        self.geometry("500x500")
+        
+        self.create_widgets()  # Call the method to create widgets
+
+    def create_widgets(self):
+        # Create all widgets here
+        {% for item in widgets %}
+        
+        {{ item.id }} = {{ item.type }}(self{% if item.type == "Button" %},text="{{ "Button" }}"{% endif %}{% if item.type == "Label" %},text="{{ "Label" }}"{% endif %}{% if item.backgroundColor != "N/A" %},bg="{{ item.backgroundColor | hex_color }}"{% endif %}{% if item.color != "N/A" %},fg="{{ item.color | hex_color }}"{% endif %})
+        {% if item.type == "Entry" %}{{ item.id }}.insert(0, "enter text here"){% endif %}
+        {{ item.id }}.place(x={{ item.left | strip_px }},y={{ item.top | strip_px }},{% if item.width != "N/A" %}width="{{ item.width}}"{% endif %},{% if item.height != "N/A" %}height="{{ item.height}}"{% endif %})
+        {% endfor %}
+
+if __name__ == "__main__":
+    app = App()
+    app.mainloop()  # Start the main loop
