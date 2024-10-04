@@ -5,7 +5,7 @@
 
 ## Installation
 ```
-git clone https://github.com/keremketenci0/PyLite-beta.git
+git clone https://github.com/keremketenci/PyLite-beta.git
 cd PyLite-beta
 npm install
 ```
